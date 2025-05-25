@@ -1,0 +1,17 @@
+services:
+  db:
+    image: postgres:${POSTGRES_VERSION}
+    container_name: postgres__${CONTAINER_PREFIX}
+    environment:
+      - POSTGRES_DB=${DEV_DB_NAME}
+      - POSTGRES_USER=${DEV_DB_USER}
+      - POSTGRES_PASSWORD=${DEV_DB_PASSWORD}
+    ports:
+      - "${DEV_DB_PORT}:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - "./docker/data/initial_data:/docker-entrypoint-initdb.d"
+
+volumes:
+  db_data:
+    name: postgres__${CONTAINER_PREFIX}
