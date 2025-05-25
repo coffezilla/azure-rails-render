@@ -1,11 +1,11 @@
 # docker postgres
 POSTGRES_VERSION=13
 CONTAINER_PREFIX=pg_rails
-DEV_DB_HOST=localhost
-DEV_DB_NAME=postgres
-DEV_DB_USER=user_myuser_dev
-DEV_DB_PASSWORD=7309MyLord
-DEV_DB_PORT=5433
+
+DOCKER_DB_NAME=postgres
+DOCKER_DB_USER=user_myuser_dev
+DOCKER_DB_PASSWORD=7309MyLord
+DOCKER_DB_PORT=5433
 
 # dev
 DEV_DB_HOST=localhost
