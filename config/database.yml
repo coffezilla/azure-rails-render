@@ -19,10 +19,9 @@ default: &default
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
-
 development:
   <<: *default
-  database: azure_rails_render_development
+  database: <%= ENV['XXXXX'] %>
 
   # The specified database role being used to connect to PostgreSQL.
   # To create additional roles in PostgreSQL see `$ createuser --help`.
@@ -56,7 +55,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: azure_rails_render_test
+  database: <%= ENV['XXXXX'] %>
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -81,18 +80,18 @@ test:
 production:
   primary: &primary_production
     <<: *default
-    database: azure_rails_render_production
-    username: azure_rails_render
-    password: <%= ENV["AZURE_RAILS_RENDER_DATABASE_PASSWORD"] %>
+    database: <%= ENV['XXXXX'] %>
+    username: <%= ENV['XXXXX'] %>
+    password: <%= ENV['XXXXX'] %>
   cache:
     <<: *primary_production
-    database: azure_rails_render_production_cache
+    database: <%= ENV['XXXXX'] %>
     migrations_paths: db/cache_migrate
   queue:
     <<: *primary_production
-    database: azure_rails_render_production_queue
+    database: <%= ENV['XXXXX'] %>
     migrations_paths: db/queue_migrate
   cable:
     <<: *primary_production
-    database: azure_rails_render_production_cable
+    database: <%= ENV['XXXXX'] %>
     migrations_paths: db/cable_migrate
