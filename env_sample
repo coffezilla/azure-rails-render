@@ -1,22 +1,23 @@
 # docker postgres
+POSTGRES_VERSION=13
 CONTAINER_PREFIX=pg_rails
 DEV_DB_HOST=localhost
 DEV_DB_NAME=postgres
-DEV_DB_USER=pg_myuser_dev
+DEV_DB_USER=user_myuser_dev
 DEV_DB_PASSWORD=7309MyLord
 DEV_DB_PORT=5433
 
 # dev
 DEV_DB_HOST=localhost
 DEV_DB_NAME=pg_mydb_dev
-DEV_DB_USER=pg_myuser_dev
+DEV_DB_USER=user_myuser_dev
 DEV_DB_PASSWORD=7309MyLord
 DEV_DB_PORT=5433
 
 # test
 TEST_DB_HOST=localhost
 TEST_DB_NAME=pg_mydb_test
-TEST_DB_USER=pg_myuser_test
+TEST_DB_USER=user_myuser_test
 TEST_DB_PASSWORD=7309MyLord
 TEST_DB_PORT=5433
 
@@ -28,4 +29,4 @@ DB_CABLE=
 DB_NAME=
 DB_USER=
 DB_PASSWORD=
-DB_PORT=5432
+DB_PORT=
